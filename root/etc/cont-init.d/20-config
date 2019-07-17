@@ -2,6 +2,10 @@
 
 mkdir -p /config
 
+if [ ! -f "/config/settings.json" ]; then
+	cp /defaults/settings.json /config/settings.json
+fi
+
 ln -sf /config /root/.duplicacy-web
 
 chmod 711 /root
