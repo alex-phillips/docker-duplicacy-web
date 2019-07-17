@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p /config
+
+ln -sf /config /root/.duplicacy-web
+
+chmod 711 /root
+
+# permissions
+chown -R abc:abc \
+	/root/.duplicacy-web \
+	/data \
+	/config \
+	/app/duplicacy
